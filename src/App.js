@@ -1,15 +1,19 @@
-import { Box, Center } from '@chakra-ui/react';
-import { Footer } from './components/footer/Footer.jsx';
-import { Header } from './components/header/Header.jsx';
 import { ApolloClient,
 	InMemoryCache,
 	ApolloProvider,
 	HttpLink,
 	from,
 } from '@apollo/client';
+
 import { ErrorLink, onError } from '@apollo/client/link/error';
 
 import { HomePage } from './pages/Home';
+
+import { Box, Center } from '@chakra-ui/react';
+
+import { Footer } from './components/footer/Footer.jsx';
+
+import { Header } from './components/header/Header.jsx';
 
 const token = process.env.REACT_APP_DATO_API_TOKEN;
 

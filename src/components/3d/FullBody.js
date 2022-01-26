@@ -34,7 +34,7 @@ export const CharacterModel = () => {
       });
       renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(scW, scH);
-      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.enabled = false;
       renderer.outputEncoding = THREE.sRGBEncoding;
       container.appendChild(renderer.domElement);
       setRenderer(renderer);
@@ -55,14 +55,14 @@ export const CharacterModel = () => {
       hemiLight.position.set(0, 200, 0);
       scene.add(hemiLight);
 
-      const dirLight = new THREE.DirectionalLight(0xffffff);
-      dirLight.position.set(0, 0, 50);
-      dirLight.castShadow = true;
-      dirLight.shadow.camera.top = 180;
-      dirLight.shadow.camera.bottom = -100;
-      dirLight.shadow.camera.left = -120;
-      dirLight.shadow.camera.right = 120;
-      scene.add(dirLight);
+    //   const dirLight = new THREE.DirectionalLight(0xffffff);
+    //   dirLight.position.set(0, 0, 50);
+    //   dirLight.castShadow = true;
+    //   dirLight.shadow.camera.top = 180;
+    //   dirLight.shadow.camera.bottom = -100;
+    //   dirLight.shadow.camera.left = -120;
+    //   dirLight.shadow.camera.right = 120;
+    //   scene.add(dirLight);
 
       // CONTROLS
       const controls = new OrbitControls(camera, renderer.domElement);
@@ -86,8 +86,8 @@ export const CharacterModel = () => {
 
       // MODEL
       loadFBXModel(scene, {
-        receiveShadow: true,
-        castShadow: true,
+        receiveShadow: false,
+        castShadow: false,
       }).then((object) => {
 		mixer = new THREE.AnimationMixer(object);
 
