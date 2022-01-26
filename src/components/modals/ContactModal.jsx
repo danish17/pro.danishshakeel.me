@@ -37,7 +37,7 @@ export const HireMe = (props) => {
     return ( 
         <>
         <Box
-          display={{ base: "none", md: "flex" }}
+          display={{ base: props.preventOnMobile ? "none" : "flex", md: "flex" }}
           alignItems="center"
           onClick={onOpen}
           aria-label="Sponsor Choc UI on Open Collective"

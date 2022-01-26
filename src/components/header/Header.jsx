@@ -45,8 +45,6 @@ export const Header = () => {
     return scrollY.onChange(() => setY(scrollY.get()));
   }, [scrollY]);
 
-  <HireMe />
-
   const MobileNavContent = (
     <VStack
       pos="absolute"
@@ -88,6 +86,7 @@ export const Header = () => {
       >
         Videos
       </Button>
+	  <HireMe />
     </VStack>
   );
 
@@ -140,7 +139,6 @@ export const Header = () => {
                 onClick={toggleMode}
                 icon={<SwitchIcon color={useColorModeValue('gray', '#f2d57e')}/>}
               />
-              <HireMe />
               <IconButton
                 display={{ base: "flex", md: "none" }}
                 aria-label="Open menu"
@@ -150,6 +148,7 @@ export const Header = () => {
                 icon={<AiOutlineMenu />}
                 onClick={mobileNav.onOpen}
               />
+			  <HireMe preventOnMobile/>
             </Flex>
           </Flex>
           {MobileNavContent}
