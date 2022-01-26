@@ -1,8 +1,9 @@
-import { Center, Grid, GridItem, Stack, VStack } from "@chakra-ui/react";
+import { Center, Grid, GridItem, Stack, VStack, Spacer } from "@chakra-ui/react";
 import { CharacterModel } from "../components/3d/FullBody";
 import { ProfileCard } from "../components/profile/ProfileCard";
 import { AboutMe, Skills } from "../components/profile/ProfileSections";
 import { WorkExperience, Education } from "../components/profile/Experiences";
+import { SkillBadges } from "../components/profile/Skills";
 
 export const HomePage = (props) => {
 	return (
@@ -29,7 +30,9 @@ export const HomePage = (props) => {
 			<WorkExperience />
 		</GridItem>
 		<GridItem width={'fit-content'}>
-			<Education />
+			 <Education />
+			 <Spacer mt={8} />
+			 <SkillBadges />
 		</GridItem>
 	</Grid>
 	</VStack>
