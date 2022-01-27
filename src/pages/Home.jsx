@@ -19,7 +19,7 @@ export const HomePage = (props) => {
 	<Stack spacing={16} p={8}>
             <AboutMe />
 			<Skills />
-			<PortfolioSection />
+			<PortfolioSection limit={4}/>
     </Stack>
 	<Grid templateColumns={{
 		base: 'repeat(1, 1fr)',
