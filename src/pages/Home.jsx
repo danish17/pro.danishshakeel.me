@@ -4,6 +4,7 @@ import { ProfileCard } from "../components/profile/ProfileCard";
 import { AboutMe, Skills } from "../components/profile/ProfileSections";
 import { WorkExperience, Education } from "../components/profile/Experiences";
 import { SkillBadges } from "../components/profile/Skills";
+import { PortfolioSection } from "../components/portfolio/PortfolioSection";
 
 export const HomePage = (props) => {
 	return (
@@ -18,6 +19,7 @@ export const HomePage = (props) => {
 	<Stack spacing={16} p={8}>
             <AboutMe />
 			<Skills />
+			<PortfolioSection />
     </Stack>
 	<Grid templateColumns={{
 		base: 'repeat(1, 1fr)',
@@ -35,6 +37,8 @@ export const HomePage = (props) => {
 			 <SkillBadges id="skills" />
 		</GridItem>
 	</Grid>
+	<Stack spacing={16} p={8}>
+    </Stack>
 	</VStack>
 	</>
 	);

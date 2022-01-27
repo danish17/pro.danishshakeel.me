@@ -36,7 +36,7 @@ export const Skills = () => {
           sm: 'repeat(2, 1fr)',
           md: 'repeat(4, 1fr)',
         }}
-        gap={{ base: '8', sm: '12', md: '16' }}>
+        gap={{ base: '4', sm: '8', md: '12' }}>
         <Feature
           heading={'Full Stack Development'}
 		  icon={<BiCodeCurly fontSize={'20px'} />}

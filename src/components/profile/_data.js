@@ -45,7 +45,7 @@ export const educationExperience = [
       endDate: '2022',
     },
     {
-      institution: 'Kendriy',
+      institution: 'Kendriya Vidyalaya',
       degree: 'Intermediate',
       major: 'Physics, Chemistry, Mathematics',
       startDate: '2017',
