@@ -27,12 +27,12 @@ export const HomePage = (props) => {
 		p={8}
 		gap={16}>
 		<GridItem width={'fit-content'}>
-			<WorkExperience />
+			<WorkExperience id="work-experience" />
 		</GridItem>
 		<GridItem width={'fit-content'}>
-			 <Education />
+			 <Education id="education" />
 			 <Spacer mt={8} />
-			 <SkillBadges />
+			 <SkillBadges id="skills" />
 		</GridItem>
 	</Grid>
 	</VStack>

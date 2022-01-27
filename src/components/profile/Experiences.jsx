@@ -2,7 +2,7 @@ import { VStack, Stack, Heading, Text, Badge, Spacer, useColorModeValue } from "
 import { educationExperience, workExperience } from "./_data";
 
 
-export const WorkExperience = () => {
+export const WorkExperience = (props) => {
 	const Experience = (props) => {
 		return (
 		<VStack alignItems={'flex-start'} bgColor={useColorModeValue('gray.100', 'gray.900')} p={4} px={8} rounded={'lg'} position={'relative'}>
@@ -20,7 +20,7 @@ export const WorkExperience = () => {
 
 	return (
 		<>
-		<Heading mb={8}>Work Experience</Heading>
+		<Heading mb={8} {...props}>Work Experience</Heading>
 		<Stack>
 			{workExperience.map((experience, index) => (
 				<Experience
@@ -38,7 +38,7 @@ export const WorkExperience = () => {
 	)
 }
 
-export const Education = () => {
+export const Education = (props) => {
 	const Experience = (props) => {
 		return (
 		<VStack alignItems={'flex-start'} bgColor={useColorModeValue('gray.100', 'gray.900')} p={4} px={8} rounded={'lg'} position={'relative'}>
@@ -58,7 +58,7 @@ export const Education = () => {
 	
 	return (
 		<>
-		<Heading mb={8}>Education</Heading>
+		<Heading mb={8} {...props}>Education</Heading>
 		<Stack>
 			{educationExperience.map((experience, index) => (
 				<Experience

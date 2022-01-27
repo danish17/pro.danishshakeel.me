@@ -3,7 +3,7 @@ import {
   chakra,
   Flex,
   HStack,
-  Icon,
+  Center,
   IconButton,
   Link,
   useColorMode,
@@ -15,16 +15,13 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useViewportScroll } from "framer-motion";
-import { FaMoon, FaSun } from "react-icons/fa";
+
+import { FaMoon, FaSun, FaGraduationCap } from "react-icons/fa";
 import { SiAboutdotme } from "react-icons/si";
+import { MdWork } from "react-icons/md";
+import { AiOutlineMenu } from "react-icons/ai";
+import { GiSkills } from "react-icons/gi";
 
-import {
-  AiOutlineMenu,
-  AiFillHome,
-  AiOutlineInbox,
-} from "react-icons/ai";
-
-import { BsFillCameraVideoFill } from "react-icons/bs";
 import { Logo } from "../Logo";
 import { HireMe } from "../modals/ContactModal";
 
@@ -60,33 +57,44 @@ export const Header = () => {
       spacing={2}
       rounded="lg"
       shadow="lg"
-	  zIndex={2}
+      zIndex={2}
     >
       <CloseButton
         aria-label="Close menu"
         justifySelf="self-start"
         onClick={mobileNav.onClose}
       />
-      <Button w="full" variant="ghost"  leftIcon={<AiFillHome />}>
-        Dashboard
-      </Button>
       <Button
+        as="a"
+        href="#work-experience"
         w="full"
-        variant="solid"
-        
-        leftIcon={<AiOutlineInbox />}
-      >
-        Inbox
-      </Button>
-      <Button
-        w="full"
+		justifyContent={'flex-start'}
         variant="ghost"
-        
-        leftIcon={<BsFillCameraVideoFill />}
+        leftIcon={<MdWork />}
       >
-        Videos
+        Work Experience
       </Button>
-	  <HireMe />
+      <Button
+	  as="a"
+	  href="#education"
+	  w="full"
+	  justifyContent={'flex-start'}
+	  variant="ghost"
+	  leftIcon={<FaGraduationCap />}
+	  >
+        Education
+      </Button>
+      <Button
+	  as="a"
+	  href="#education"
+	  w="full"
+	  justifyContent={'flex-start'} 
+	  variant="ghost"
+	  leftIcon={<GiSkills />}
+	  >
+        Skills
+      </Button>
+    <HireMe />
     </VStack>
   );
 
@@ -118,9 +126,9 @@ export const Header = () => {
               color="gray.400"
             >
               <IconButton
-			  	as="a"
-				href="https://danishshakeel.me"
-				target="_blank"
+                as="a"
+                href="https://danishshakeel.me"
+                target="_blank"
                 size="md"
                 fontSize="lg"
                 aria-label={`View Profile`}
@@ -129,7 +137,7 @@ export const Header = () => {
                 ml={{ base: "0", md: "3" }}
                 icon={<SiAboutdotme />}
               />
-			  <IconButton
+              <IconButton
                 size="md"
                 fontSize="lg"
                 aria-label={`Switch to ${text} mode`}
@@ -137,7 +145,9 @@ export const Header = () => {
                 colorScheme={"gray"}
                 ml={{ base: "0", md: "3" }}
                 onClick={toggleMode}
-                icon={<SwitchIcon color={useColorModeValue('gray', '#f2d57e')}/>}
+                icon={
+                  <SwitchIcon color={useColorModeValue("gray", "#f2d57e")} />
+                }
               />
               <IconButton
                 display={{ base: "flex", md: "none" }}
@@ -148,7 +158,7 @@ export const Header = () => {
                 icon={<AiOutlineMenu />}
                 onClick={mobileNav.onOpen}
               />
-			  <HireMe preventOnMobile/>
+              <HireMe preventOnMobile />
             </Flex>
           </Flex>
           {MobileNavContent}

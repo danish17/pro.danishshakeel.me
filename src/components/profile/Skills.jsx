@@ -1,7 +1,7 @@
 import { Flex, Badge, Heading } from "@chakra-ui/react"
 import { skillsList } from "./_data";
 
-export const SkillBadges = () => {
+export const SkillBadges = (props) => {
 	const colorSchemes = ['red', 'teal', 'yellow', 'green', 'purple'];
 
 	Array.prototype.random = function () {
@@ -10,7 +10,7 @@ export const SkillBadges = () => {
 
 	return (
 		<>
-		<Heading mb={8} id="skills-section">Skills</Heading>
+		<Heading mb={8} {...props}>Skills</Heading>
 		{skillsList.map((skillCat, index) => {
 			return (
 				<>
@@ -27,7 +27,6 @@ export const SkillBadges = () => {
 					)
 				})}
 				</Flex>
-
 				</>
 			)
 		})}
