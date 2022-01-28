@@ -4,6 +4,7 @@ import { ProfileCard } from "../components/profile/ProfileCard";
 import { AboutMe, Skills } from "../components/profile/ProfileSections";
 import { WorkExperience, Education } from "../components/profile/Experiences";
 import { Achievements } from "../components/profile/Achievements";
+import { Publications } from "../components/profile/Publications";
 import { SkillBadges } from "../components/profile/Skills";
 import { PortfolioSection } from "../components/portfolio/PortfolioSection";
 
@@ -31,16 +32,19 @@ export const HomePage = (props) => {
 		width={'100%'}
 		p={8}
 		gap={16}>
-		<GridItem width={'fit-content'}>
+		<GridItem width={'100%'}>
 			<WorkExperience id="work-experience" />
 		</GridItem>
-		<GridItem width={'fit-content'}>
+		<GridItem width={'100%'}>
 			 <Education id="education" />
 			 <Spacer mt={8} />
 			 <SkillBadges id="skills" />
 		</GridItem>
-		<GridItem width={'fit-content'}>
+		<GridItem width={'100%'}>
 			<Achievements id="achievements" />
+		</GridItem>
+		<GridItem width={'100%'}>
+			<Publications id="publications" />
 		</GridItem>
 	</Grid>
 	</VStack>

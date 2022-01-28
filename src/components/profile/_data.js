@@ -192,10 +192,35 @@ export const skillsList = [
 	},
 ]
 
-export const projects = [
+export const achievements = [
 	{
-		achievement: '',
-		date: '',
-		organization: '',
-	}
+		name: 'Digital India Awardee',
+		date: '2015',
+		organization: 'Government of India',
+		type: 'award'
+	},
+	{
+		name: 'AIR 3, GAIT',
+		date: '2021',
+		organization: 'JTP Co., Ltd.',
+		type: 'certification'
+	},
+	{
+		name: '1st, Int\'l Cyber Olympiad',
+		date: '2015',
+		organization: 'EHF',
+		type: 'award'
+	},
+	{
+		name: '3st, Int\'l Science Olympiad',
+		date: '2015',
+		organization: 'EHF',
+		type: 'award'
+	},
+	{
+		name: 'Rank 5, AMCAT',
+		date: '2020',
+		organization: 'Aspiring Minds',
+		type: 'certificate'
+	},
 ]
