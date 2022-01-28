@@ -3,7 +3,6 @@ import {
   chakra,
   Flex,
   HStack,
-  Center,
   IconButton,
   Link,
   useColorMode,
@@ -68,30 +67,30 @@ export const Header = () => {
         as="a"
         href="#work-experience"
         w="full"
-		justifyContent={'flex-start'}
+        justifyContent={'flex-start'}
         variant="ghost"
         leftIcon={<MdWork />}
       >
         Work Experience
       </Button>
       <Button
-	  as="a"
-	  href="#education"
-	  w="full"
-	  justifyContent={'flex-start'}
-	  variant="ghost"
-	  leftIcon={<FaGraduationCap />}
-	  >
+      as="a"
+      href="#education"
+      w="full"
+      justifyContent={'flex-start'}
+      variant="ghost"
+      leftIcon={<FaGraduationCap />}
+      >
         Education
       </Button>
       <Button
-	  as="a"
-	  href="#education"
-	  w="full"
-	  justifyContent={'flex-start'} 
-	  variant="ghost"
-	  leftIcon={<GiSkills />}
-	  >
+      as="a"
+      href="#education"
+      w="full"
+      justifyContent={'flex-start'} 
+      variant="ghost"
+      leftIcon={<GiSkills />}
+      >
         Skills
       </Button>
     <HireMe />
@@ -107,6 +106,10 @@ export const Header = () => {
         bg={bg}
         w="full"
         overflowY="hidden"
+        mb={{
+            base: 0,
+            md: 16,
+        }}
       >
         <chakra.div h="4.5rem" mx="auto" maxW="1200px">
           <Flex w="full" h="full" px="6" align="center" justify="space-between">

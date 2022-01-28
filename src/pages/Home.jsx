@@ -3,6 +3,7 @@ import { CharacterModel } from "../components/3d/FullBody";
 import { ProfileCard } from "../components/profile/ProfileCard";
 import { AboutMe, Skills } from "../components/profile/ProfileSections";
 import { WorkExperience, Education } from "../components/profile/Experiences";
+import { Achievements } from "../components/profile/Achievements";
 import { SkillBadges } from "../components/profile/Skills";
 import { PortfolioSection } from "../components/portfolio/PortfolioSection";
 
@@ -10,7 +11,9 @@ export const HomePage = (props) => {
 	return (
 	<>
 	<VStack>
-	<div className="threejs-animated-world">
+	<div 
+	className="threejs-animated-world"
+	>
 		<CharacterModel />
 	</div>
 	<Center>
@@ -36,9 +39,10 @@ export const HomePage = (props) => {
 			 <Spacer mt={8} />
 			 <SkillBadges id="skills" />
 		</GridItem>
+		<GridItem width={'fit-content'}>
+			<Achievements id="achievements" />
+		</GridItem>
 	</Grid>
-	<Stack spacing={16} p={8}>
-    </Stack>
 	</VStack>
 	</>
 	);

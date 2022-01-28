@@ -14,26 +14,33 @@ export const workExperience = [
       isSpecialType: 'Freelance',
     },
     {
-      company: 'Lead Developer',
-      role: 'All Things Kashmir',
+      company: 'All Things Kashmir',
+      role: 'Lead Developer',
       startDate: '06/2020',
       endDate: '09/2020',
       isSpecialType: 'Freelance',
     },
     {
-      company: 'Data Science Researcher',
-      role: 'SKIMS',
+      company: 'SKIMS',
+      role: 'Data Science Researcher',
       startDate: '04/2020',
       endDate: '08/2020',
       isSpecialType: 'Internship',
     },
     {
-      company: 'Full Stack Developer',
-      role: 'EzeSkool',
+      company: 'EzeSkool',
+      role: 'Full Stack Developer',
       startDate: '06/2019',
       endDate: '11/2019',
       isSpecialType: 'Freelance',
     },
+	{
+		company: 'Hackoverflow Society',
+		role: 'Management Secretary',
+		startDate: '08/2020',
+		endDate: '02/2022',
+		isSpecialType: 'Volunteering Experience',
+	  },
   ]
 
 export const educationExperience = [
@@ -131,6 +138,9 @@ export const skillsList = [
 				name: 'Docker',
 			},
 			{
+				name: 'GitHub Actions',
+			},
+			{
 				name: 'Easy Engine',
 			},
 			{
@@ -180,4 +190,12 @@ export const skillsList = [
 			},
 		],
 	},
+]
+
+export const projects = [
+	{
+		achievement: '',
+		date: '',
+		organization: '',
+	}
 ]
