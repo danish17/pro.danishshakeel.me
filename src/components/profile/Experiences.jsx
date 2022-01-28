@@ -24,7 +24,7 @@ export const WorkExperience = (props) => {
 		<Stack>
 			{workExperience.map((experience, index) => (
 				<Experience
-				key={experience.id}
+				key={index}
 				role={experience.role}
 				company={experience.company}
 				startDate={experience.startDate}
@@ -62,7 +62,7 @@ export const Education = (props) => {
 		<Stack>
 			{educationExperience.map((experience, index) => (
 				<Experience
-				key={experience.id}
+				key={index}
 				degree={experience.degree}
 				major={experience.major}
 				institution={experience.institution}

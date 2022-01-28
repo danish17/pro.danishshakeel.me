@@ -1,13 +1,13 @@
 export const images = [
 	{
 	  id: '01',
-	  src: 'https://images.unsplash.com/photo-1602024242516-fbc9d4fda4b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
-	  alt: 'Awesome watch',
+	  src: '/images/react-chakra-portfolio.webp',
+	  alt: 'Reach Chakra Portfolio - Danish Shakeel',
 	},
 	{
 	  id: '02',
-	  src: 'https://images.unsplash.com/photo-1451290337906-ac938fc89bce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1777&q=80',
-	  alt: 'Awesome watch',
+	  src: '/images/react-chakra-portfolio.webp',
+	  alt: 'AAlfred Slack Bot - Danish Shakeel',
 	},
 	{
 	  id: '03',
@@ -33,68 +33,53 @@ export const images = [
   export const products = [
 	{
 	  id: '1',
-	  name: 'MightyIQ Migration',
+	  name: 'React-Chakra Portfolio',
 	  imageUrl:
-		'https://images.unsplash.com/photo-1602024242516-fbc9d4fda4b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
+		'/images/react-chakra-portfolio.webp',
 	  longDescription:
-		'Lorem ipsum',
+		'A React-based portfolio website created with Chakra UI, Three.js. It is a fully responsive website that works on mobile, tablet and desktop ang has a dark mode. The 3D model has been created with ReadyPlayerMe, and the animations have been added using Mixamo. Blender has been used to edit the model and animations. The website is self-hosted on a Linux server and uses DatoCMS and WordPress to store the data. GraphQL is used to fetch the data from the API.',
+	  sourceCode: '',
+	  projectURL: 'https://danishshakeel.me',
 	  description:
-		'With a sleek design and a captivating essence, this is a modern Classic made for every occasion.',
+		'Responsive and modern-looking portfolio created with React, Chakra, GraphQL, and Three.js',
 	  images,
 	},
 	{
-	  id: '2',
-	  name: 'Iconic Turquoise',
-	  imageUrl:
-		'https://images.unsplash.com/photo-1509941943102-10c232535736?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
-	  longDescription:
-		'Lorem ipsum',
-	  description:
-		'With a sleek design and a captivating essence, this is a modern Classic made for every occasion.',
-	  images,
+		id: '2',
+		name: 'Alfred Slack Bot',
+		imageUrl:
+		  '/images/alfred-slack-bot.webp',
+		longDescription:
+		  'A Slack bot to automatically send birthday and anniversary messages to your Slack workspace. The bot uses the Slack API to send messages and uses Google Apps Script alongside Google Sheets API to fetch the birthdays and anniversaries. OAuth is used to authenticate the bot with Slack and Google Triggers are used for time-driven events.',
+		sourceCode: 'https://github.com/danish17/alfred-slack-bot',
+		description:
+		  'Slack bot to automatically send birthday and anniversary messages to your Slack workspace.',
+		images,
 	},
 	{
-	  id: '3',
-	  name: 'Marble Leather',
-	  imageUrl:
-		'https://images.unsplash.com/photo-1564594985645-4427056e22e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
-	  longDescription:
-		'Lorem ipsum',
-	  description:
-		'With a sleek design and a captivating essence, this is a modern Classic made for every occasion.',
-	  images,
+		id: '3',
+		name: 'Alfred Slack Bot',
+		imageUrl:
+		  'https://images.unsplash.com/photo-1602024242516-fbc9d4fda4b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
+		longDescription:
+		  'A Slack Bot written in Google App Script',
+		sourceCode: '',
+		projectURL: 'https://danishshakeel.me',
+		description:
+		  'Personal portfolio created with React, Chakra, and Three.js.',
+		images,
 	},
 	{
-	  id: '4',
-	  name: 'Silve wolf',
-	  imageUrl:
-		'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=680&q=80',
-	  longDescription:
-		'Lorem ipsum',
-	  description:
-		'With a sleek design and a captivating essence, this is a modern Classic made for every occasion.',
-	  images,
-	},
-	{
-	  id: '5',
-	  name: 'Silve wolf',
-	  imageUrl:
-		'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=680&q=80',
-	  longDescription:
-		'Lorem ipsum',
-	  description:
-		'With a sleek design and a captivating essence, this is a modern Classic made for every occasion.',
-	  images,
-	},
-	{
-	  id: '6',
-	  name: 'Silve wolf',
-	  imageUrl:
-		'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=680&q=80',
-	  longDescription:
-		'Lorem ipsum',
-	  description:
-		'With a sleek design and a captivating essence, this is a modern Classic made for every occasion.',
-	  images,
+		id: '4',
+		name: 'React-Chakra Portfolio',
+		imageUrl:
+		  'https://images.unsplash.com/photo-1602024242516-fbc9d4fda4b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
+		longDescription:
+		  'A React-based portfolio website created with Chakra UI, Three.js. It is a fully responsive website that works on mobile, tablet and desktop ang has a dark mode. The 3D model has been created with ReadyPlayerMe, and the animations have been added using Mixamo. Blender has been used to edit the model and animations. The website is self-hosted on a Linux server and uses DatoCMS and WordPress to store the data. GraphQL is used to fetch the data from the API.',
+		sourceCode: '',
+		projectURL: 'https://danishshakeel.me',
+		description:
+		  'Personal portfolio created with React, Chakra, and Three.js.',
+		images,
 	},
   ]

@@ -17,13 +17,16 @@ import {
 	useDisclosure,
 	useBreakpointValue,
 	useColorModeValue,
+	HStack,
+	IconButton,
   } from '@chakra-ui/react'
   import * as React from 'react'
+  import { FaGithub, FaLink } from 'react-icons/fa'
   
   export const ProductCard = (props) => {
 	const { product, rootProps } = props
 	const { isOpen, onOpen, onClose } = useDisclosure()
-	const { name, imageUrl, description, longDescription } = product
+	const { name, imageUrl, description, longDescription, sourceCode, projectURL } = product
 	return (
 	  <>
 	  <Stack
@@ -70,7 +73,7 @@ import {
 		  <ModalHeader>{name}</ModalHeader>
 		  <ModalCloseButton />
 		  <ModalBody>
-			  <Box position="relative">
+			  <Box position="relative" mb={4}>
 				  <AspectRatio ratio={4 / 3}>
 				  <Image
 					  src={imageUrl}
@@ -84,7 +87,29 @@ import {
 				  />
 				  </AspectRatio>
 			  </Box>
-			  {longDescription}
+			  <Text textAlign={'justify'}>
+			  	{longDescription}
+			  </Text>
+			  <HStack mt={4}>
+				  {
+					  sourceCode && <IconButton
+					  colorScheme={'green'}
+					  as='a'
+					  href={sourceCode}
+					  target={'_blank'}
+					  icon={<FaGithub />}
+					  />
+				  }
+				{
+					  projectURL && <IconButton
+					  colorScheme={'blue'}
+					  as='a'
+					  href={projectURL}
+					  target={'_blank'}
+					  icon={<FaLink />}
+					  />
+				  }
+			  </HStack>
 		  </ModalBody>
 		  <ModalFooter>
 			  <Button onClick={onClose}>Close</Button>

@@ -1,4 +1,4 @@
-import { Flex, Badge, Heading } from "@chakra-ui/react"
+import { Flex, Badge, Heading, Box } from "@chakra-ui/react"
 import { skillsList } from "./_data";
 
 export const SkillBadges = (props) => {
@@ -13,7 +13,7 @@ export const SkillBadges = (props) => {
 		<Heading mb={8} {...props}>Skills</Heading>
 		{skillsList.map((skillCat, index) => {
 			return (
-				<>
+				<Box key={index}>
 				<Heading as="h4" fontSize="lg" fontWeight="600" my={4}>
 					{skillCat.name}
 				</Heading>
@@ -21,13 +21,13 @@ export const SkillBadges = (props) => {
 				{skillCat.skills.map((skill, index) => {
 					return (
 						
-						<Badge mr={2} mb={1} colorScheme={colorSchemes.random()}>
+						<Badge key={index} mr={2} mb={1} colorScheme={colorSchemes.random()}>
 							{skill.name}
 						</Badge>
 					)
 				})}
 				</Flex>
-				</>
+				</Box>
 			)
 		})}
 		</>
