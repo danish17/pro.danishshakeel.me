@@ -36,7 +36,7 @@ import {
 		})}
 		{...rootProps}
 	  >
-		<Box position="relative" overflow={"hidden"} borderRadius={"lg"}>
+		<Box position="relative" overflow={"hidden"} borderRadius={"lg"} boxShadow={'md'}>
 		  <AspectRatio ratio={4 / 3}>
 			<Image
 			  src={imageUrl}

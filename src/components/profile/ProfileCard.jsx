@@ -8,7 +8,8 @@ export const ProfileCard = () => {
 		maxW={'380px'}
 		borderRadius={'lg'}
 		zIndex={'2'}
-		p={4}>
+		p={4}
+		boxShadow={'2xl'}>
 			<Center>
 			<Image src={'/profile-picture.jpg'} filter={'grayscale(80%)'} boxSize={'150px'} borderRadius={'full'} fit={'cover'} mb={4}/>
 			</Center>
