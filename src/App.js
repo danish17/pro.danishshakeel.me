@@ -15,20 +15,31 @@ import { Footer } from './components/footer/Footer.jsx';
 
 import { Header } from './components/header/Header.jsx';
 
-const token = process.env.REACT_APP_DATO_API_TOKEN;
-
-const errorLink = onError(({ graphQLErrors, networkError }) => {
+/**
+ * Apollo Configuration
+ */
+ const errorLink = onError(({ graphQLErrors, networkError }) => {
 	if (graphQLErrors) {
-		console.error(graphQLErrors);
+		graphQLErrors.map(({ message, locations, path }) =>
+			console.warn(
+				`[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
+			),
+		);
 	}
+
+	if (networkError) console.log(`[Network error]: ${networkError}`);
 });
 
+const link = from([
+	errorLink,
+	new HttpLink({
+		uri: 'https://danishshakeel.me/graphql',
+	})
+]);
+
 const client = new ApolloClient({
-	cache: InMemoryCache,
-	link: from([
-		ErrorLink,
-		new HttpLink({uri: 'https://graphql.datocms.com/' })
-	])
+	cache: new InMemoryCache(),
+	link: link,
 });
 
 function App() {

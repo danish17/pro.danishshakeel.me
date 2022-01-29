@@ -8,6 +8,7 @@ import { Publications } from "../components/profile/Publications";
 import { SkillBadges } from "../components/profile/Skills";
 import { PortfolioSection } from "../components/portfolio/PortfolioSection";
 import { ContactForm } from "../components/ContactForm";
+import { BlogPosts } from "../components/blog/BlogPosts";
 
 export const HomePage = (props) => {
 	return (
@@ -25,6 +26,7 @@ export const HomePage = (props) => {
             <AboutMe />
 			<Skills />
 			<PortfolioSection limit={4}/>
+			<BlogPosts />
     </Stack>
 	<Grid templateColumns={{
 		base: 'repeat(1, 1fr)',
