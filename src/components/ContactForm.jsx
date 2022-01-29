@@ -10,11 +10,7 @@ import {
 	Button,
 } from '@chakra-ui/react';
 
-import { ReCAPTCHA } from 'react-google-recaptcha';
-
 import { FaTelegramPlane } from 'react-icons/fa';
-
-const TEST_SITE_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
 
 export const ContactForm = (props) => {
 	const onChange = (value) => {
@@ -53,12 +49,6 @@ export const ContactForm = (props) => {
 				<FormLabel>How may I help you?</FormLabel>
 				<Textarea placeholder='I want help with...' />
 				</FormControl>
-				<ReCAPTCHA
-					style={{ display: "inline-block" }}
-					theme="dark"
-					sitekey={TEST_SITE_KEY}
-					onChange={onChange}
-				/>
                 <Button type="submit" colorScheme="green" size="lg" fontSize="md" leftIcon={<FaTelegramPlane />}>
                     Send
                 </Button>
