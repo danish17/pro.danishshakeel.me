@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import { useEffect, useState } from "react";
-import { Text, Skeleton, Center, VStack, Grid, GridItem } from "@chakra-ui/react";
+import { Text, Skeleton, Center, VStack, Grid, GridItem, Button } from "@chakra-ui/react";
 import { GET_BLOG_POSTS } from "../../GraphQL/Queries";
 import { BlogCard } from "./BlogCard";
 
@@ -13,11 +13,12 @@ export const GetBlogPosts = (props) => {
 
 	useEffect(() => {
 		if (data && !isEmpty(data)) {
-			setPosts(data.posts.edges);
+			setPosts(data.posts.nodes);
 		}
 	}, [data]);
 
 	return (
+		<>
 		<Grid templateColumns={{
 			base: 'repeat(1, 1fr)',
 			md: 'repeat(2, 1fr)'
@@ -38,11 +39,15 @@ export const GetBlogPosts = (props) => {
 			{!isEmpty(posts) && posts.map((post, index) => {
 				return ( 
 				<GridItem key={index}>
-					{console.log(post.node.featuredImage.node.sourceUrl)}
 					<BlogCard
-					title={post.node.title}
-					excerpt={post.node.excerpt}
-					imageUrl={post.node.featuredImage.node.sourceUrl}/>
+					title={post.title}
+					excerpt={post.excerpt}
+					imageUrl={post.featuredImage.node.sourceUrl}
+					postUrl={post.link}
+					publishedDate={post.date}
+					authorName={post.author.node.firstName}
+					authorAvatar={post.author.node.avatar.url}
+					/>
 				</GridItem>
 				);
 			})}
@@ -54,5 +59,9 @@ export const GetBlogPosts = (props) => {
 				</Center>
 			}
 		</Grid>
+		<Center>
+		<Button mt="8" as="a" href="https://danishshakeel.me" target={'_blank'} size="lg" colorScheme="red" fontWeight="bold">View Blog</Button>
+		</Center>
+		</>
 	);
 }

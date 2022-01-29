@@ -10,6 +10,9 @@ import {
 } from '@chakra-ui/react';
 
 export const BlogCard = (props) => {
+	var postPublishedDate = new Date(props.publishedDate);
+	var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
 	return (
 		<Box
         maxW={'100%'}
@@ -25,11 +28,12 @@ export const BlogCard = (props) => {
           mt={-6}
           mx={-6}
           mb={6}
-          pos={'relative'}>
+          pos={'relative'}
+		  overflow={'hidden'}>
           <Image
             src={props.imageUrl}
 			alt={props.imageAlt}
-            layout={'cover'}
+			fit={'cover'}
 			fallback={<Skeleton />}
           />
         </Box>
@@ -45,7 +49,13 @@ export const BlogCard = (props) => {
           <Heading
             color={useColorModeValue('gray.700', 'white')}
             fontSize={'2xl'}
-            fontFamily={'body'}>
+            fontFamily={'body'}
+			as='a'
+			href={props.postUrl}
+			target={'_blank'}
+			_hover={{
+				textDecoration: 'underline',
+			}}>
             {props.title}
           </Heading>
           <Text color={'gray.500'} noOfLines={3}>
@@ -54,12 +64,12 @@ export const BlogCard = (props) => {
         </Stack>
         <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
           <Avatar
-            src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
-            alt={'Author'}
+            src={props.authorAvatar}
+            alt={props.authorName}
           />
           <Stack direction={'column'} spacing={0} fontSize={'sm'}>
             <Text fontWeight={600}>{props.author}</Text>
-            <Text color={'gray.500'}>Feb 08, 2021 · 6min read</Text>
+            <Text color={'gray.500'}>{postPublishedDate.toLocaleDateString("en-US", options)}</Text>
           </Stack>
         </Stack>
       </Box>
