@@ -1,4 +1,4 @@
-import { Center, Grid, GridItem, Stack, VStack, Spacer } from "@chakra-ui/react";
+import { Center, Grid, GridItem, Stack, VStack, Spacer, Heading } from "@chakra-ui/react";
 import { CharacterModel } from "../components/3d/FullBody";
 import { ProfileCard } from "../components/profile/ProfileCard";
 import { AboutMe, Skills } from "../components/profile/ProfileSections";
@@ -7,6 +7,7 @@ import { Achievements } from "../components/profile/Achievements";
 import { Publications } from "../components/profile/Publications";
 import { SkillBadges } from "../components/profile/Skills";
 import { PortfolioSection } from "../components/portfolio/PortfolioSection";
+import { ContactForm } from "../components/ContactForm";
 
 export const HomePage = (props) => {
 	return (
@@ -47,6 +48,15 @@ export const HomePage = (props) => {
 			<Publications id="publications" />
 		</GridItem>
 	</Grid>
+	<Stack spacing={16} p={8} w={'100%'}>
+			<Heading>
+				Contact
+			</Heading>
+            <ContactForm w={{
+				base: '100%',
+				md: '80%' 
+				}}/>
+    </Stack>
 	</VStack>
 	</>
 	);

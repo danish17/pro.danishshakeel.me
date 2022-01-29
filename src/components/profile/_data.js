@@ -212,7 +212,7 @@ export const achievements = [
 		type: 'award'
 	},
 	{
-		name: '3st, Int\'l Science Olympiad',
+		name: '3rd, Int\'l Science Olympiad',
 		date: '2015',
 		organization: 'EHF',
 		type: 'award'
@@ -222,5 +222,33 @@ export const achievements = [
 		date: '2020',
 		organization: 'Aspiring Minds',
 		type: 'certificate'
+	},
+]
+
+export const publications = [
+	{
+		name: 'Fake news detection and fact verification using knowledge graphs and machine learning',
+		date: '2021',
+		organization: 'Preprint',
+	},
+	{
+		name: 'Personalized drug concentration predictions with machine learning: An exploratory study',
+		date: '2020',
+		organization: 'Int. J. Basic Clin. Pharmacol 9, 980',
+	},
+	{
+		name: 'Insect Detection and Flight Tracking in a Controlled Environment Using Machine Vision: Review of Existing Techniques and an Improved Approach',
+		date: '2020',
+		organization: 'Proceedings of the International Conference on Innovative Computing',
+	},
+	{
+		name: '3rd, Int\'l Science Olympiad',
+		date: '2015',
+		organization: 'EHF',
+	},
+	{
+		name: 'Rank 5, AMCAT',
+		date: '2020',
+		organization: 'Aspiring Minds',
 	},
 ]
