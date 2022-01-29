@@ -13,6 +13,7 @@ export const GetBlogPosts = (props) => {
 
 	useEffect(() => {
 		if (data && !isEmpty(data)) {
+			console.log(data)
 			setPosts(data.posts.nodes);
 		}
 	}, [data]);
@@ -47,6 +48,9 @@ export const GetBlogPosts = (props) => {
 					publishedDate={post.date}
 					authorName={post.author.node.firstName}
 					authorAvatar={post.author.node.avatar.url}
+					categoryName={post.categories.edges[0].node.name}
+					categoryUrl={post.categories.edges[0].node.link}
+					tags={post.tags.nodes}
 					/>
 				</GridItem>
 				);
@@ -60,7 +64,9 @@ export const GetBlogPosts = (props) => {
 			}
 		</Grid>
 		<Center>
-		<Button mt="8" as="a" href="https://danishshakeel.me" target={'_blank'} size="lg" colorScheme="red" fontWeight="bold">View Blog</Button>
+			<Button mt="8" as="a" href="https://danishshakeel.me" target={'_blank'} size="lg" colorScheme="red" fontWeight="bold">
+			View Blog
+			</Button>
 		</Center>
 		</>
 	);

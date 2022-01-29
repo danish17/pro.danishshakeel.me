@@ -17,7 +17,7 @@ export const GET_BLOG_POSTS = gql`
 				edges {
 				node {
 					name
-					uri
+					link
 				}
 				}
 			}
@@ -28,7 +28,7 @@ export const GET_BLOG_POSTS = gql`
 			tags(first: 104) {
 				nodes {
 				name
-				uri
+				link
 				}
 			}
 			featuredImage {

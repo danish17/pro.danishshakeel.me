@@ -55,7 +55,7 @@ import {
 		<Stack>
 		  <Stack spacing="1">
 		  <Heading as={'h3'} size={'md'}> {name} </Heading>
-			<Text fontWeight="medium" color={useColorModeValue('gray.700', 'gray.400')}>
+			<Text color={'gray.500'} noOfLines={'3'}>
 			  {description}
 			</Text>
 		  </Stack>
