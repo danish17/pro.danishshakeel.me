@@ -42,6 +42,19 @@ export const Header = () => {
     return scrollY.onChange(() => setY(scrollY.get()));
   }, [scrollY]);
 
+  const NavLink = (props) => {
+	return (
+		<Link
+		as={ReachLink}
+		to={props.location}
+		rounded={'md'}>
+		<Button variant={'ghost'}>
+		{props.name}
+		</Button>
+	  	</Link>
+	);
+  }
+
   const MobileNavContent = (
     <VStack
       pos="absolute"
@@ -64,36 +77,9 @@ export const Header = () => {
         justifySelf="self-start"
         onClick={mobileNav.onClose}
       />
-      <Button
-        as="a"
-        href="#work-experience"
-        w="full"
-        justifyContent={'flex-start'}
-        variant="ghost"
-        leftIcon={<MdWork />}
-      >
-        Work Experience
-      </Button>
-      <Button
-      as="a"
-      href="#education"
-      w="full"
-      justifyContent={'flex-start'}
-      variant="ghost"
-      leftIcon={<FaGraduationCap />}
-      >
-        Education
-      </Button>
-      <Button
-      as="a"
-      href="#education"
-      w="full"
-      justifyContent={'flex-start'} 
-      variant="ghost"
-      leftIcon={<GiSkills />}
-      >
-        Skills
-      </Button>
+      <NavLink location={'/'} name={'Home'} />
+	  <NavLink location={'/portfolio'} name={'Portfolio'} />
+	  <NavLink location={'/publications'} name={'Publications'} />
     <HireMe />
     </VStack>
   );
@@ -111,6 +97,7 @@ export const Header = () => {
             base: 0,
             md: 16,
         }}
+		zIndex={2}
       >
         <chakra.div h="4.5rem" mx="auto" maxW="1200px">
           <Flex w="full" h="full" px="6" align="center" justify="space-between">
@@ -121,7 +108,16 @@ export const Header = () => {
                 </HStack>
               </Link>
             </Flex>
-
+			<HStack
+				as={'nav'}
+				spacing={4}
+				display={{ base: 'none', md: 'flex' }}
+				ml={8}
+				>
+					<NavLink location={'/'} name={'Home'} />
+					<NavLink location={'/portfolio'} name={'Portfolio'} />
+					<NavLink location={'/publications'} name={'Publications'} />
+			</HStack>
             <Flex
               justify="flex-end"
               w="full"

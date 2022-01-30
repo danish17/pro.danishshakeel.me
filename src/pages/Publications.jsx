@@ -1,4 +1,4 @@
-import { VStack, Stack, Heading, Text, Button } from "@chakra-ui/react";
+import { VStack, Stack, Heading, Text, Box } from "@chakra-ui/react";
 import { publications } from "../components/profile/_data";
 import { ResearchLinks } from "../components/ResearchLinks";
 
@@ -27,7 +27,7 @@ export const PublicationsPage = (props) => {
 	}
 	
 	return (
-		<>
+		<Box p={4}>
 		<Heading size={'3xl'} mb={16}>
 			Publications</Heading>
 		<Stack>
@@ -43,6 +43,6 @@ export const PublicationsPage = (props) => {
 			}
 		</Stack>
 		<ResearchLinks />
-		</>
+		</Box>
 	)
 }

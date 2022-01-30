@@ -27,7 +27,7 @@ code {
 	width: 100% !important;
 	position: relative;
 	cursor: grab;
-	z-index: 1;
+	z-index: -1; /* Canvas creates issue with header */
 }
 
 /* Override default box-shadow on buttons */
