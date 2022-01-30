@@ -10,10 +10,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ErrorLink, onError } from '@apollo/client/link/error';
 
 import { HomePage } from './pages/Home';
-
 import { PublicationsPage } from './pages/Publications';
-
 import { PortfolioPage } from './pages/Portfolio';
+import { NotFoundPage } from './pages/NotFoundPage';
 
 import { Box, Center } from '@chakra-ui/react';
 
@@ -57,6 +56,7 @@ function App() {
 		<Center>
 		<Box maxW={"1100px"} w={"1100px"}>
 			<Routes>
+				<Route path='*' element={<NotFoundPage />}></Route>
 				<Route path='/' element={<HomePage />} exact></Route>
 				<Route path='/portfolio' element={<PortfolioPage />}></Route>
 				<Route path='/publications' element={<PublicationsPage />}></Route>
