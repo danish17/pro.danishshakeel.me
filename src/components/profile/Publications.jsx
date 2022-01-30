@@ -30,7 +30,12 @@ export const Publications = (props) => {
 				/>
 			))
 			}
-			<Link as={ReachLink} to={'/publications'}><Button>View All Publications</Button></Link>
+			<Link as={ReachLink} to={'/publications'}
+			_hover={{
+				textDecoration: 'none',
+			}}>
+				<Button>View All Publications</Button>
+			</Link>
 		</Stack>
 		</>
 	)

@@ -35,7 +35,7 @@ export const images = [
 	  alt: 'Awesome watch',
 	},
   ]
-  export const products = [
+  export const projects = [
 	{
 		id: '1',
 		name: 'All Things Kashmir',
@@ -101,7 +101,7 @@ export const images = [
 		images,
 	},
 	{
-		id: '5',
+		id: '6',
 		name: 'Drug Administration',
 		imageUrl:
 		  '/images/drugadminml.png',

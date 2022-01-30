@@ -2,7 +2,7 @@ import { Heading, Box } from "@chakra-ui/react";
 import { PortfolioCard } from "../components/portfolio/PortfolioCard";
 import { PortfolioGrid } from "../components/portfolio/PortfolioGrid";
 import { TestimonialBlurredSection } from "../components/testimonial/Testimonial";
-import { products } from "../components/portfolio/_data";
+import { projects } from "../components/portfolio/_data";
 
 export const PortfolioPage = (props) => {
 	return (
@@ -11,8 +11,8 @@ export const PortfolioPage = (props) => {
 			Portfolio
 		</Heading>
 		<PortfolioGrid my={4}>
-			{products.map((product) => (
-				<PortfolioCard key={product.id} product={product} />
+			{projects.map((project) => (
+				<PortfolioCard key={project.id} project={project} />
 			))}
 		</PortfolioGrid>
 		<TestimonialBlurredSection />

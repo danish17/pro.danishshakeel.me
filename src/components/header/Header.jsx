@@ -45,8 +45,12 @@ export const Header = () => {
 		<Link
 		as={ReachLink}
 		to={props.location}
-		rounded={'md'}>
-		<Button variant={'ghost'}>
+		rounded={'md'}
+		_hover={{
+			textDecoration: 'none',
+		}}>
+		<Button variant={'ghost'}
+		>
 		{props.name}
 		</Button>
 	  	</Link>

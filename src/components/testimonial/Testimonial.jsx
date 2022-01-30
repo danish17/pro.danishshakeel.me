@@ -36,7 +36,6 @@ import {
 
   
 const TestmonialCard = (props) => {
-	const { name, role, content, avatar, index } = props;
 	return (
 	  <Flex
 		boxShadow={'lg'}
@@ -71,7 +70,7 @@ const TestmonialCard = (props) => {
 		  backgroundSize: 'cover',
 		  top: 0,
 		  left: 0,
-		  backgroundImage: backgrounds[index % 4],
+		  backgroundImage: backgrounds[props.index % 4],
 		}}>
 		<Flex
 		  direction={'column'}
@@ -149,7 +148,7 @@ const TestmonialCard = (props) => {
 		  mt={16}
 		  mx={'auto'}>
 		  {testimonials.map((cardInfo, index) => (
-			<TestmonialCard {...cardInfo} index={index} />
+			<TestmonialCard {...cardInfo} key={index} />
 		  ))}
 		</SimpleGrid>
 		<Box>

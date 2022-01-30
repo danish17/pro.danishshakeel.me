@@ -24,9 +24,9 @@ import {
   import { FaGithub, FaLink } from 'react-icons/fa'
   
   export const PortfolioCard = (props) => {
-	const { product, rootProps } = props
+	const { project, rootProps } = props
 	const { isOpen, onOpen, onClose } = useDisclosure()
-	const { name, imageUrl, description, longDescription, sourceCode, projectURL } = product
+	const { name, imageUrl, description, longDescription, sourceCode, projectURL } = project
 	return (
 	  <>
 	  <Stack

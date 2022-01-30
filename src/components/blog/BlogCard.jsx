@@ -99,9 +99,9 @@ export const BlogCard = (props) => {
           </Stack>
         </Stack>
 		<HStack wrap={'wrap'} justifyContent={'center'} mt={4}>
-			  {props.tags.map((tag) => {
+			  {props.tags.map((tag, index) => {
 				  return (
-					  <Badge my={1} colorScheme={colorSchemes.random()} as='a' href={tag.link} target={'_blank'} rel="noreferrer">
+					  <Badge key={index} my={1} colorScheme={colorSchemes.random()} as='a' href={tag.link} target={'_blank'} rel="noreferrer">
 						  {tag.name}
 					  </Badge>
 				  );
