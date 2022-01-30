@@ -16,11 +16,9 @@ import {
 import { useViewportScroll } from "framer-motion";
 import { Link as ReachLink } from "react-router-dom";
 
-import { FaMoon, FaSun, FaGraduationCap } from "react-icons/fa";
-import { SiAboutdotme } from "react-icons/si";
-import { MdWork } from "react-icons/md";
+import { FaMoon, FaSun } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
-import { GiSkills } from "react-icons/gi";
+import { ImBlog } from "react-icons/im";
 
 import { Logo } from "../Logo";
 import { HireMe } from "../modals/ContactModal";
@@ -129,13 +127,15 @@ export const Header = () => {
                 as="a"
                 href="https://danishshakeel.me"
                 target="_blank"
+				rel="noreferrer"
+				aria-label="Visit my blog"
                 size="md"
                 fontSize="lg"
                 aria-label={`View Profile`}
                 variant="ghost"
                 colorScheme={"gray"}
                 ml={{ base: "0", md: "3" }}
-                icon={<SiAboutdotme />}
+                icon={<ImBlog />}
               />
               <IconButton
                 size="md"
