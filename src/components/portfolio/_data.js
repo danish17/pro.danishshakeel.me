@@ -7,17 +7,17 @@ export const images = [
 	{
 	  id: '02',
 	  src: '/images/react-chakra-portfolio.webp',
-	  alt: 'AAlfred Slack Bot - Danish Shakeel',
+	  alt: 'Alfred Slack Bot - Danish Shakeel',
 	},
 	{
 	  id: '03',
-	  src: 'https://images.unsplash.com/photo-1568010434570-74e9ba7126bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
-	  alt: 'Awesome watch',
+	  src: '/images/lempify.webp',
+	  alt: 'Lempify - Danish Shakeel',
 	},
 	{
 	  id: '04',
-	  src: 'https://images.unsplash.com/photo-1569411032431-07598b0012c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
-	  alt: 'Awesome watch',
+	  src: '/images/bibtex-chrome.webp',
+	  alt: 'BibTeX Chrome - Danish Shakeel',
 	},
 	{
 	  id: '05',
@@ -58,28 +58,28 @@ export const images = [
 	},
 	{
 		id: '3',
-		name: 'Alfred Slack Bot',
+		name: 'Lempify',
 		imageUrl:
-		  'https://images.unsplash.com/photo-1602024242516-fbc9d4fda4b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
+		  '/images/lempify.webp',
 		longDescription:
-		  'A Slack Bot written in Google App Script',
-		sourceCode: '',
-		projectURL: 'https://danishshakeel.me',
+		  'A simple BASH script to install and configure Nginx, MySQL, and PHP on Ubuntu-based Linux systems. It also installs WordPress CLI to help you quickly get started with WordPress on your server.',
+		sourceCode: 'https://github.com/danish17/lempify',
+		projectURL: '',
 		description:
-		  'Personal portfolio created with React, Chakra, and Three.js.',
+		  'Shell script to install and configure a new LEMP stack on a server with WordPress CLI.',
 		images,
 	},
 	{
 		id: '4',
-		name: 'React-Chakra Portfolio',
+		name: 'BibTeX Chrome',
 		imageUrl:
-		  'https://images.unsplash.com/photo-1602024242516-fbc9d4fda4b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
+		  '/images/bibtex-chrome.webp',
 		longDescription:
-		  'A React-based portfolio website created with Chakra UI, Three.js. It is a fully responsive website that works on mobile, tablet and desktop ang has a dark mode. The 3D model has been created with ReadyPlayerMe, and the animations have been added using Mixamo. Blender has been used to edit the model and animations. The website is self-hosted on a Linux server and uses DatoCMS and WordPress to store the data. GraphQL is used to fetch the data from the API.',
-		sourceCode: '',
-		projectURL: 'https://danishshakeel.me',
+		  'BibTeX Chrome is a Chromium extension that helps you convert BibTeX citations to other formats - MLA, APA, Chicago, Harvard, and Vancouver. The core was originally written by Enric Moreu (https://github.com/enric1994/bibtexonline) and the extension wrapper has been written in Vanilla JavaScript.',
+		sourceCode: 'https://github.com/danish17/bibtex-chrome',
+		projectURL: 'https://chrome.google.com/webstore/detail/bibtex-chrome/mpkkjoodomgaedblckommkefnpinkgpa',
 		description:
-		  'Personal portfolio created with React, Chakra, and Three.js.',
+		  'Chrome extension to convert BibTeX citations to MLA, APA, and other formats.',
 		images,
 	},
   ]

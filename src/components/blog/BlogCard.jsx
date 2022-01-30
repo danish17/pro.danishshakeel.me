@@ -30,7 +30,7 @@ export const BlogCard = (props) => {
         p={6}
         overflow={'hidden'}>
         <Box
-          h={'210px'}
+          h={'fit-content'}
           bg={'gray.100'}
           mt={-6}
           mx={-6}
