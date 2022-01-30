@@ -65,6 +65,7 @@ export const BlogCard = (props) => {
             fontFamily={'body'}
 			as='a'
 			href={props.postUrl}
+			rel="noreferrer"
 			target={'_blank'}
 			_hover={{
 				textDecoration: 'underline',
@@ -75,6 +76,7 @@ export const BlogCard = (props) => {
 		  fontWeight={'medium'}
 		  as='a'
 		  href={props.categoryUrl}
+		  rel="noreferrer"
 		  target={'_blank'} 
 		  color={useColorModeValue('gray.400', 'gray.600')}
 		  _hover={{
@@ -99,7 +101,7 @@ export const BlogCard = (props) => {
 		<HStack wrap={'wrap'} justifyContent={'center'} mt={4}>
 			  {props.tags.map((tag) => {
 				  return (
-					  <Badge my={1} colorScheme={colorSchemes.random()} as='a' href={tag.link} target={'_blank'}>
+					  <Badge my={1} colorScheme={colorSchemes.random()} as='a' href={tag.link} target={'_blank'} rel="noreferrer">
 						  {tag.name}
 					  </Badge>
 				  );

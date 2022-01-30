@@ -96,6 +96,7 @@ import {
 					  colorScheme={'green'}
 					  as='a'
 					  href={sourceCode}
+					  rel="noreferrer"
 					  target={'_blank'}
 					  icon={<FaGithub />}
 					  />
@@ -105,6 +106,7 @@ import {
 					  colorScheme={'blue'}
 					  as='a'
 					  href={projectURL}
+					  rel="noreferrer"
 					  target={'_blank'}
 					  icon={<FaLink />}
 					  />
