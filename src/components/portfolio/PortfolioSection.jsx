@@ -1,4 +1,5 @@
-import { Box, Button, Center, Stack, Heading } from '@chakra-ui/react'
+import { Box, Button, Center, Stack, Heading, Link } from '@chakra-ui/react'
+import { Link as ReachLink } from 'react-router-dom';
 import * as React from 'react'
 import { PortfolioCard } from './PortfolioCard'
 import { products } from './_data'
@@ -22,7 +23,9 @@ export const PortfolioSection = (props) => {
 			))}
 			</PortfolioGrid>
 			<Center>
+				<Link as={ReachLink} to={'/portfolio'}>
 				<Button mt="8" as="a" href="#" size="lg" colorScheme="red" fontWeight="bold">All Projects</Button>
+				</Link>
 			</Center>
 		</Box>
 		</>

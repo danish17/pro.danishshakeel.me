@@ -5,11 +5,13 @@ import { ApolloClient,
 	from,
 } from '@apollo/client';
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import { ErrorLink, onError } from '@apollo/client/link/error';
 
 import { HomePage } from './pages/Home';
 
-import { AllPublications } from './pages/Publications';
+import { PublicationsPage } from './pages/Publications';
 
 import { PortfolioPage } from './pages/Portfolio';
 
@@ -48,17 +50,23 @@ const client = new ApolloClient({
 
 function App() {
   return (
+	<BrowserRouter>
 	<ApolloProvider client={client}>
     <div className="App">
 	<Header />
 		<Center>
 		<Box maxW={"1100px"} w={"1100px"}>
-			<PortfolioPage />
+			<Routes>
+				<Route path='/' element={<HomePage />} exact></Route>
+				<Route path='/portfolio' element={<PortfolioPage />}></Route>
+				<Route path='/publications' element={<PublicationsPage />}></Route>
+			</Routes>
 			<Footer />
 		</Box>
 		</Center>
 	</div>
 	</ApolloProvider>
+	</BrowserRouter>
   );
 }
 

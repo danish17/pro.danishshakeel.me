@@ -2,7 +2,7 @@ import { VStack, Stack, Heading, Text, Button } from "@chakra-ui/react";
 import { publications } from "../components/profile/_data";
 import { ResearchLinks } from "../components/ResearchLinks";
 
-export const AllPublications = (props) => {
+export const PublicationsPage = (props) => {
 	const Experience = (props) => {
 		return (
 		<VStack alignItems={'flex-start'} p={4} px={8} rounded={'lg'} position={'relative'}>

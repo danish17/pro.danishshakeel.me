@@ -14,6 +14,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useViewportScroll } from "framer-motion";
+import { Link as ReachLink } from "react-router-dom";
 
 import { FaMoon, FaSun, FaGraduationCap } from "react-icons/fa";
 import { SiAboutdotme } from "react-icons/si";
@@ -114,7 +115,7 @@ export const Header = () => {
         <chakra.div h="4.5rem" mx="auto" maxW="1200px">
           <Flex w="full" h="full" px="6" align="center" justify="space-between">
             <Flex align="center">
-              <Link href="/">
+			<Link as={ReachLink} to={'/'}>
                 <HStack>
                   <Logo />
                 </HStack>

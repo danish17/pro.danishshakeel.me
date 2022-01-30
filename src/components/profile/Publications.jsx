@@ -1,4 +1,5 @@
-import { VStack, Stack, Heading, Text, Button } from "@chakra-ui/react";
+import { VStack, Stack, Heading, Text, Button, Link } from "@chakra-ui/react";
+import { Link as ReachLink } from "react-router-dom";
 import { publications } from "./_data";
 
 export const Publications = (props) => {
@@ -29,7 +30,7 @@ export const Publications = (props) => {
 				/>
 			))
 			}
-			<Button>View All Publications</Button>
+			<Link as={ReachLink} to={'/publications'}><Button>View All Publications</Button></Link>
 		</Stack>
 		</>
 	)

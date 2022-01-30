@@ -13,7 +13,6 @@ export const GetBlogPosts = (props) => {
 
 	useEffect(() => {
 		if (data && !isEmpty(data)) {
-			console.log(data)
 			setPosts(data.posts.nodes);
 		}
 	}, [data]);
@@ -41,6 +40,7 @@ export const GetBlogPosts = (props) => {
 				return ( 
 				<GridItem key={index}>
 					<BlogCard
+					key={index}
 					title={post.title}
 					excerpt={post.excerpt}
 					imageUrl={post.featuredImage.node.sourceUrl}
