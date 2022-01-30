@@ -11,7 +11,7 @@ export const ProfileCard = () => {
 		p={4}
 		boxShadow={'2xl'}>
 			<Center>
-			<Image src={'/profile-picture.jpg'} filter={'grayscale(80%)'} boxSize={'150px'} borderRadius={'full'} fit={'cover'} mb={4}/>
+			<Image src={'/profile-picture.jpg'} draggable={'false'} filter={'grayscale(10%)'} boxSize={'150px'} borderRadius={'full'} fit={'cover'} mb={4}/>
 			</Center>
 			<Heading as={'h3'} size={'lg'} textAlign={'center'}>
 					Danish Shakeel
