@@ -33,7 +33,7 @@ export const images = [
   export const products = [
 	{
 	  id: '1',
-	  name: 'React-Chakra Portfolio',
+	  name: 'Personal Portfolio',
 	  imageUrl:
 		'/images/react-chakra-portfolio.webp',
 	  longDescription:

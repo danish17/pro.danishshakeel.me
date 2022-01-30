@@ -9,6 +9,10 @@ import { ErrorLink, onError } from '@apollo/client/link/error';
 
 import { HomePage } from './pages/Home';
 
+import { AllPublications } from './pages/Publications';
+
+import { PortfolioPage } from './pages/Portfolio';
+
 import { Box, Center } from '@chakra-ui/react';
 
 import { Footer } from './components/footer/Footer.jsx';
@@ -49,7 +53,7 @@ function App() {
 	<Header />
 		<Center>
 		<Box maxW={"1100px"} w={"1100px"}>
-			<HomePage />
+			<PortfolioPage />
 			<Footer />
 		</Box>
 		</Center>

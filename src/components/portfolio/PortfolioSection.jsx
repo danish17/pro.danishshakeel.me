@@ -1,8 +1,8 @@
 import { Box, Button, Center, Stack, Heading } from '@chakra-ui/react'
 import * as React from 'react'
-import { ProductCard } from './PortfolioCard'
+import { PortfolioCard } from './PortfolioCard'
 import { products } from './_data'
-import { ProductGrid } from './PortfolioGrid'
+import { PortfolioGrid } from './PortfolioGrid'
 
 export const PortfolioSection = (props) => {
 	return (
@@ -14,13 +14,13 @@ export const PortfolioSection = (props) => {
 			<Stack align={'left'}>
 				<Heading>Projects</Heading>
 			</Stack>
-			<ProductGrid my={4}>
+			<PortfolioGrid my={4}>
 			{props.limit ? products.slice(0,props.limit).map((product) => (
-				<ProductCard key={product.id} product={product} />
+				<PortfolioCard key={product.id} product={product} />
 			)) : products.map((product) => (
-				<ProductCard key={product.id} product={product} />
+				<PortfolioCard key={product.id} product={product} />
 			))}
-			</ProductGrid>
+			</PortfolioGrid>
 			<Center>
 				<Button mt="8" as="a" href="#" size="lg" colorScheme="red" fontWeight="bold">All Projects</Button>
 			</Center>

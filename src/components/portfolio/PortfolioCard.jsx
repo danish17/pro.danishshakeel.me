@@ -23,7 +23,7 @@ import {
   import * as React from 'react'
   import { FaGithub, FaLink } from 'react-icons/fa'
   
-  export const ProductCard = (props) => {
+  export const PortfolioCard = (props) => {
 	const { product, rootProps } = props
 	const { isOpen, onOpen, onClose } = useDisclosure()
 	const { name, imageUrl, description, longDescription, sourceCode, projectURL } = product
