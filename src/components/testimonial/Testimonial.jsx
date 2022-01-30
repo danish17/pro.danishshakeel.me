@@ -129,7 +129,7 @@ const TestmonialCard = (props) => {
 			fontSize={48}
 			fontWeight={'bold'}
 			color={useColorModeValue('gray.700', 'gray.50')}>
-			What my clients say
+			What people say
 		  </chakra.h1>
 		  <chakra.h2
 			margin={'auto'}

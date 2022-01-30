@@ -26,8 +26,8 @@ export const images = [
 	},
 	{
 	  id: '06',
-	  src: 'https://images.unsplash.com/photo-1565440962783-f87efdea99fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=936&q=80',
-	  alt: 'Awesome watch',
+	  src: '/images/drugadminml.png',
+	  alt: 'Drug Administration ML - Danish Shakeel',
 	},
 	{
 	  id: '07',
@@ -98,6 +98,19 @@ export const images = [
 		projectURL: 'https://chrome.google.com/webstore/detail/bibtex-chrome/mpkkjoodomgaedblckommkefnpinkgpa',
 		description:
 		  'Chrome extension to convert BibTeX citations to MLA, APA, and other formats.',
+		images,
+	},
+	{
+		id: '5',
+		name: 'Drug Administration',
+		imageUrl:
+		  '/images/drugadminml.png',
+		longDescription:
+		  'A machine learning model to predict the dosage and the resultant serum level of a patient after consuming a Narrow Safety Margin Drugs - Phenytoin. The model was trained on the data from the health institutions in Kashmir, India. The model was created using TensorFlow, and Scikit-Learn. The model is deployed on Heroku with Flask.',
+		sourceCode: 'https://github.com/danish17/drug-administration-ml',
+		projectURL: 'https://drug-administration-ml.herokuapp.com/',
+		description:
+		  'Machine Learning model to predict dosage and resultant serum levels of Phenytoin.',
 		images,
 	},
   ]

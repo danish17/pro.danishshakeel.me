@@ -28,7 +28,8 @@ export const AllPublications = (props) => {
 	
 	return (
 		<>
-		<Heading mb={8} {...props}>Publications</Heading>
+		<Heading size={'3xl'} mb={16}>
+			Publications</Heading>
 		<Stack>
 			{publications.map((publication, index) => (
 				<Experience

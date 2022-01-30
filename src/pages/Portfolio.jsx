@@ -7,7 +7,7 @@ import { products } from "../components/portfolio/_data";
 export const PortfolioPage = (props) => {
 	return (
 		<>
-		<Heading>
+		<Heading size={'3xl'} mb={16}>
 			Portfolio
 		</Heading>
 		<PortfolioGrid my={4}>
