@@ -1,6 +1,7 @@
 import { Heading } from "@chakra-ui/react";
 import { PortfolioCard } from "../components/portfolio/PortfolioCard";
 import { PortfolioGrid } from "../components/portfolio/PortfolioGrid";
+import { TestimonialBlurredSection } from "../components/testimonial/Testimonial";
 import { products } from "../components/portfolio/_data";
 
 export const PortfolioPage = (props) => {
@@ -14,6 +15,7 @@ export const PortfolioPage = (props) => {
 				<PortfolioCard key={product.id} product={product} />
 			))}
 		</PortfolioGrid>
+		<TestimonialBlurredSection />
 		</>
 	);
 }
