@@ -16,7 +16,7 @@ import {
 import { useViewportScroll } from "framer-motion";
 import { Link as ReachLink } from "react-router-dom";
 
-import { FaMoon, FaSun } from "react-icons/fa";
+import { FaMoon, FaSun, FaGithub } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 import { ImBlog } from "react-icons/im";
 
@@ -140,6 +140,20 @@ export const Header = () => {
                 colorScheme={"gray"}
                 ml={{ base: "0", md: "3" }}
                 icon={<ImBlog />}
+              />
+			  <IconButton
+                as="a"
+                href="https://github.com/danish17/pro.danishshakeel.me"
+                target="_blank"
+				rel="noreferrer"
+				aria-label="Source code"
+                size="md"
+                fontSize="lg"
+                aria-label={`View Profile`}
+                variant="ghost"
+                colorScheme={"gray"}
+                ml={{ base: "0", md: "3" }}
+                icon={<FaGithub />}
               />
               <IconButton
                 size="md"

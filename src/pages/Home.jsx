@@ -14,11 +14,11 @@ export const HomePage = (props) => {
 	return (
 	<>
 	<VStack>
-	<div 
+	{/* <div 
 	className="threejs-animated-world"
 	>
 		<CharacterModel />
-	</div>
+	</div> */}
 	<Center>
 		<ProfileCard />
 	</Center>

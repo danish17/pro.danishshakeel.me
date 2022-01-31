@@ -5,7 +5,9 @@ import { ApolloClient,
 	from,
 } from '@apollo/client';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+
+import { useLayoutEffect } from 'react';
 
 import { ErrorLink, onError } from '@apollo/client/link/error';
 
@@ -47,9 +49,21 @@ const client = new ApolloClient({
 	link: link,
 });
 
+/**
+ * Scrolls to top of page on route change
+ */
+const CustomRouterWrapper = ({children}) => {
+	const location = useLocation();
+	useLayoutEffect(() => {
+	  document.documentElement.scrollTo(0, 0);
+	}, [location.pathname]);
+	return children
+} 
+
 function App() {
   return (
 	<BrowserRouter>
+	<CustomRouterWrapper>
 	<ApolloProvider client={client}>
     <div className="App">
 	<Header />
@@ -66,6 +80,7 @@ function App() {
 		</Center>
 	</div>
 	</ApolloProvider>
+	</CustomRouterWrapper>
 	</BrowserRouter>
   );
 }
