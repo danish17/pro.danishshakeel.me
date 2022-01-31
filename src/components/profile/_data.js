@@ -16,8 +16,8 @@ export const workExperience = [
     {
       company: 'All Things Kashmir',
       role: 'Lead Developer',
-      startDate: '06/2020',
-      endDate: '09/2020',
+      startDate: '09/2020',
+      endDate: '12/2020',
       isSpecialType: 'Freelance',
     },
     {
