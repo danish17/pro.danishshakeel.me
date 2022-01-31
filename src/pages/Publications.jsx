@@ -1,8 +1,11 @@
 import { VStack, Stack, Heading, Text, Box } from "@chakra-ui/react";
+import ReactGA from "react-ga";
 import { publications } from "../components/profile/_data";
 import { ResearchLinks } from "../components/ResearchLinks";
 
 export const PublicationsPage = (props) => {
+	ReactGA.pageview(window.location.pathname);
+
 	const Experience = (props) => {
 		return (
 		<VStack alignItems={'flex-start'} p={4} px={8} rounded={'lg'} position={'relative'}>
