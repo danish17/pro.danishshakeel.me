@@ -1,4 +1,5 @@
 import { Center, Grid, GridItem, Stack, VStack, Spacer, Heading } from "@chakra-ui/react";
+import ReactGA from "react-ga";
 import { CharacterModel } from "../components/3d/FullBody";
 import { ProfileCard } from "../components/profile/ProfileCard";
 import { AboutMe, Skills } from "../components/profile/ProfileSections";
@@ -11,6 +12,8 @@ import { ContactForm } from "../components/ContactForm";
 import { BlogPosts } from "../components/blog/BlogPosts";
 
 export const HomePage = (props) => {
+	ReactGA.pageview(window.location.pathname);
+
 	return (
 	<>
 	<VStack>
