@@ -9,15 +9,21 @@ import {
 	Textarea, 
 	Button,
 	Spinner,
+	useToast,
 } from '@chakra-ui/react';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { FaTelegramPlane, FaCheck } from 'react-icons/fa';
 
 export const ContactForm = (props) => {
 	const [sending, setSending] = useState(false);
 	const [sent, setSent] = useState(false);
+	const toast = useToast();
+
+	const Toast = () => {
+		
+	}
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -43,10 +49,17 @@ export const ContactForm = (props) => {
 		  message => {
 			setSending(false);
 			setSent(true);
+			toast({
+				title: 'Email sent successfully.',
+				description: "I've got your email! I will respond to you as soon as possible.",
+				status: 'success',
+				duration: 3000,
+				isClosable: true,
+			});
 		  }
 		);
 	}
-
+	
 	return (
 		<chakra.form
             onSubmit={handleSubmit}
