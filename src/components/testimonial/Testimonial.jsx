@@ -77,16 +77,16 @@ const TestmonialCard = (props) => {
 		  textAlign={'left'}
 		  justifyContent={'space-between'}>
 		  <chakra.p
-			fontFamily={'Inter'}
+			fontFamily={['Inter', 'sans-serif']}
 			fontWeight={'medium'}
 			fontSize={'15px'}
 			pb={4}>
 			{props.content}
 		  </chakra.p>
-		  <chakra.p fontFamily={'Inter'} fontWeight={'bold'} fontSize={14}>
+		  <chakra.p fontFamily={['Inter', 'sans-serif']} fontWeight={'bold'} fontSize={14}>
 			{props.name}
 			<chakra.span
-			  fontFamily={'Inter'}
+			  fontFamily={['Inter', 'sans-serif']}
 			  fontWeight={'medium'}
 			  color={'gray.500'}>
 			  {' '}
@@ -115,7 +115,7 @@ const TestmonialCard = (props) => {
 		width={'full'}>
 		<Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
 		  <chakra.h3
-		  	fontFamily={'Inter'}
+		  	fontFamily={['Inter', 'sans-serif']}
 			fontWeight={'bold'}
 			fontSize={20}
 			textTransform={'uppercase'}
@@ -123,7 +123,7 @@ const TestmonialCard = (props) => {
 			Testimonials
 		  </chakra.h3>
 		  <chakra.h1
-		  	fontFamily={'Inter'}
+		  	fontFamily={['Inter', 'sans-serif']}
 			py={5}
 			fontSize={48}
 			fontWeight={'bold'}
@@ -133,7 +133,7 @@ const TestmonialCard = (props) => {
 		  <chakra.h2
 			margin={'auto'}
 			width={'70%'}
-			fontFamily={'Inter'}
+			fontFamily={['Inter', 'sans-serif']}
 			fontWeight={'medium'}
 			color={useColorModeValue('gray.500', 'gray.400')}>
 			I have delivered enterprise-grade products to {' '}
