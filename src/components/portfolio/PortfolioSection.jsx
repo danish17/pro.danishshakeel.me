@@ -26,7 +26,7 @@ export const PortfolioSection = (props) => {
 				<Link as={ReachLink} to={'/portfolio'} _hover={{
 				textDecoration: 'none',
 				}}>
-				<Button mt="8" as="a" href="#" size="lg" colorScheme="red" fontWeight="bold">All Projects</Button>
+				<Button mt="8" size="lg" colorScheme="red" fontWeight="bold">All Projects</Button>
 				</Link>
 			</Center>
 		</Box>
